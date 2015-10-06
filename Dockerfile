@@ -7,4 +7,4 @@ RUN \
 
 RUN gem install nerve
 
-CMD ["nerve"]
+CMD ["/bin/bash", "watch_config.sh"]
