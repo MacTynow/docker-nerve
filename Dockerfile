@@ -1,10 +1,10 @@
-FROM debian:sid
+FROM alpine
 
-RUN \
-  apt-get update && \
-  apt-get install -y ruby ruby-dev build-essential libghc-zlib-dev sudo && \
-  rm -rf /var/lib/apt/lists/*
+RUN apk --update add ruby ruby-dev build-base
 
 RUN gem install nerve
+
+WORKDIR /root
+COPY . /root
 
 CMD ["/bin/bash", "watch_config.sh"]
