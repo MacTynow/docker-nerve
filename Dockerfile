@@ -7,4 +7,4 @@ RUN gem install nerve
 WORKDIR /root
 COPY . /root
 
-CMD ["/bin/bash", "watch_config.sh"]
+CMD ["/bin/sh", "watch_config.sh"]

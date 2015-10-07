@@ -1,4 +1,4 @@
-nerve -c /etc/nerve/nerve.json.conf
+nerve -c /etc/nerve/nerve.conf.json
 cd /etc/nerve/services
 while true; do
   change=$(inotifywait -e modify,delete,create .)
